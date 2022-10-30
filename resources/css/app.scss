@@ -1,0 +1,155 @@
+@use "config";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    background-color: config.$bg-color;
+    color:config.$color;
+    font-family: config.$font-stack;
+    line-height:config.$line-height;
+
+}
+
+body {
+    position:relative;
+
+}
+main {
+    min-height: 100vh;
+    transition: .5s ease-in all;
+}
+
+a, img {
+    @extend %unselect;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+table td, table th {
+    text-align: center;
+    width: 220px;
+    padding:10px;
+}
+#employees_table, #departaments_table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-top:30px;
+    padding-bottom: 45px;
+}
+
+input {
+    border:1px solid #dee2e6;
+    text-align: center;
+}
+
+#up-screen {
+    z-index: 100;
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    opacity: 0.4;
+    transition: all .3s ease-out;
+    cursor: pointer;
+  
+    img {
+      background-color: config.$primary-color !important; 
+      border:1px solid #3333331c;
+      width: 40px;
+      padding:10px;
+      border-radius: 50%;
+    }
+}
+  
+#up-screen:hover {
+opacity: 1;
+}
+
+::selection {
+color: rgb(255, 255, 255);
+background-color: config.$primary-color;
+}
+
+
+.container {
+    max-width: 1124px;
+    width:100%;
+    position:relative;
+    padding-right:20px;
+    padding-left:20px;
+    margin: 0 auto;
+}
+
+body > header {
+@extend %unselect;
+top:0;
+  width: 100%;
+  min-height:80px;
+  padding: 10px !important;
+  opacity:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:999 !important;
+  position: fixed !important;
+  background-color: config.$bg-color;
+  box-shadow: 0px 2px 2px 0px rgba(54, 54, 54, 0.089);
+}
+
+.logo {
+    max-width: 150px;
+}
+
+#banner {
+    position: relative;
+    @extend %unselect;
+
+    .banner-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        z-index:3;
+        gap:40px;
+        border-radius: 10px;
+        padding:35px 85px;
+        background-color: white;
+        box-shadow: 0 0 2px 1px rgba(24, 24, 24, 0.24);
+
+        img {
+            width: 250px;
+            
+        }
+    }
+
+    > img {
+        min-height: 600px;
+        opacity: 0;
+    }
+
+}
+
+#app {
+    padding-top:95px;
+    background-color: white;
+}
+
+
+
+@import "media";

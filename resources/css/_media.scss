@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+
+    .logo {
+        width: 180px;
+        max-width: unset;
+    }
+
+    main {
+        padding-top:80px;
+    }
+
+    #app {
+        padding-top:35px;
+        background-color: white;
+    }
+
+    #banner {
+        img {
+            opacity: 1;
+        }
+    }
+
+}
