@@ -2,8 +2,8 @@
   <div class='flex flex-column'>
     <label for="nume" class='primary-color'>Shortener</label>
     <input class='border border-gray-800' name="shortener" type="text" id="shortener_input" v-model="shortenerValue">
+    <button class='btn btn-primary my-2 flex self-end' @click="this.getResults()">Shorten</button>
   </div>
-  <button class='btn btn-primary my-2' @click="this.getResults()">Shorten</button>
   <div>
     <div class='primary-color m-2' v-if="this.shortenLink">      
       Shorten: {{ this.shortenLink }}

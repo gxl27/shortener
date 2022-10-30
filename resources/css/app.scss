@@ -35,13 +35,28 @@ img {
 
 table td, table th {
     text-align: center;
-    width: 220px;
     padding:10px;
+    justify-content: center;
 }
-#employees_table, #departaments_table{
+th > div label{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+}
+#links{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.original-link-column{
+    width: 320px;
+    max-width: 320px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
 }
 .pagination {
     display: flex;
@@ -53,6 +68,12 @@ table td, table th {
 input {
     border:1px solid #dee2e6;
     text-align: center;
+    font-size: 1.1em;
+    padding:10px;
+
+}
+.modify-input {
+    padding:0;
 }
 
 #up-screen {

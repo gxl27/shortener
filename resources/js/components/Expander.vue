@@ -2,8 +2,8 @@
   <div class='flex flex-column'>
     <label for="nume" class='primary-color'>Expander</label>
     <input class='border border-gray-800' name="expander" type="text" id="expander_input" v-model="expanderValue">
+    <button class='btn btn-primary my-2 flex self-end' @click="this.getResults()">Expand</button>
   </div>
-  <button class='btn btn-primary my-2' @click="this.getResults()">Expand</button>
   <div class='primary-color'>
     <span> {{ expanderResponse }}</span>
   </div>
